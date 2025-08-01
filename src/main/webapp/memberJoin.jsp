@@ -16,15 +16,16 @@
 		
 		<h2>회원 가입 양식</h2>
 		<hr>
-		<form action="memberJoinOk.jsp">
-			아이디 : <input type="text" name="memberid"><br><br>
+		<!-- method="get" URL에 데이터가 노출되어 보안에 취약 / method="post" URL에 데이터가 노출되지 않아 보안성이 높음 -->
+		<form action="memberJoinOk.jsp" method="post"> 
+			아이디 : <input type="text" name="memberid" required="required"><br><br> <!-- required 필수 입력 -->
 			비밀번호 : <input type="password" name="memberpw"><br><br>
 			이름 : <input type="text" name="membername"><br><br>
 			나이 : <input type="text" name="memberage"><br><br>
 			성별 : <input type="radio" name="gender" value="male" checked="checked">남자 
 				  <input type="radio" name="gender" value="female">여자 
 				  <br><br>
-			이메일 : <input type="text" name="email1">@
+			이메일 : <input type="text" name="email1" size="10">@
 													<select name="email2">
 														<option value="naver.com">naver.com</option>
 														<option value="daum.net">daum.net</option>

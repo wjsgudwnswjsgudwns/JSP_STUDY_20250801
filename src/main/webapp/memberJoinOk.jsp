@@ -16,6 +16,8 @@
 		<h2>회원 가입 정보</h2>
 		<hr>
 		<%
+		request.setCharacterEncoding("UTF-8"); // 넘어온 데이터가 깨지지않도록 방지. 무조건 해주는게 좋다.
+		
 		String id = request.getParameter("memberid");
 		String pw = request.getParameter("memberpw");
 		String name = request.getParameter("membername");

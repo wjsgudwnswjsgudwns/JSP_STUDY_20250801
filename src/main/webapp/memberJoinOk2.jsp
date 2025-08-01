@@ -46,7 +46,7 @@
 			<li>자기소개 : <%= intro %></li>
 			<li>취미 : 
 					<%
-					if(hobbymap.isEmpty()) {
+					if(hobbymap.get("hobby") == null) {
 						out.print("취미없음");
 					} else {
 						for (String hobby : hobbymap.get("hobby")) {
@@ -70,11 +70,15 @@
 								hobbies = request.getParameterValues(hobby);
 							}
 						}
-						for(String hobby : hobbies){
-							out.println(hobby);
+						if (hobbies != null){
+							for(String hobby : hobbies){
+								out.println(hobby);
 						}
+						
+						}else {
+							out.println("Null");
 					}
-					
+					}
 					%>
 			</li>
 			
